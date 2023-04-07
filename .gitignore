@@ -1,0 +1,6 @@
+# downloadable source code / assignment docs
+*.zip*
+
+# environmental variables / security
+.htaccess
+.htpasswd
