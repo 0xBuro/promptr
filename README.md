@@ -1,4 +1,3 @@
-# PHP MySQL WebApp
+# Promptr
 
-- [x] Dynamic routes
-- [x] .htaccess config
+this will become something.
