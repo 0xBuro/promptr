@@ -4,3 +4,6 @@
 # environmental variables / security
 .htaccess
 .htpasswd
+
+# vscode configuration
+.vscode

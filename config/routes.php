@@ -1,16 +1,37 @@
 <?php
+require_once __DIR__ . '/../init.php';
 
-$base_dir = __DIR__ . "../";
+/* --------------------------------
+    routes.php  
+    Hier werden alle Routes erzeugt 
+    und entsprechend zurückgegeben.
+    -------------------------------- */
 
-$routes = [
-    '/' => 'home.php',
-    '/about' => 'about.php',
-    '/contact' => 'contact.php',
-];
+$base_dir = APP_ROOT;
+// URI Request
+$request_uri = $_SERVER['REQUEST_URI'];
 
-$route = rtrim($_SERVER['REQUEST_URI'], '/');
-if (array_key_exists($route, $routes)) {
-    require_once __DIR__ . '/../pages/' . $routes[$route];
+
+// URI in Parameter Array splitten
+$parameters = explode('/', $request_uri);
+
+// Falls URI leer ist
+if (empty($parameters[0])) {
+  // default page laden
+  include($base_dir . '/index.php');
+} else if ($parameters[0] == $base_dir and $parameters[1] == 'page') {
+  // falls page existiert
+  $page_name = $parameters[1];
+  $page_path = 'pages/' . $page_name . '.php';
+  if (file_exists($page_path)) {
+    // page Inhalt laden
+    include($page_path);
+  } else {
+    // page existiert nicht
+    include($base_dir . '/pages/404.php');
+  }
 } else {
-    require_once __DIR__ . '/../pages/404.php';
+  // page nicht gefunden
+  include($base_dir . '/pages/404.php');
 }
+?>
