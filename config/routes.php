@@ -19,7 +19,7 @@ $parameters = explode('/', $request_uri);
 if (empty($parameters[0])) {
   // default page laden
   include($base_dir . '/index.php');
-} else if ($parameters[0] == $base_dir and $parameters[1] == 'page') {
+} else if ($parameters[0] == $base_dir and $parameters[1] == 'pages') {
   // falls page existiert
   $page_name = $parameters[1];
   $page_path = 'pages/' . $page_name . '.php';
