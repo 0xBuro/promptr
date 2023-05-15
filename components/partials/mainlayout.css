@@ -1,0 +1,114 @@
+nav {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 6.5vh;
+    background-color: #fff;
+    box-shadow: 0rem 0.2rem 0.4rem #00098000,0 0.25rem 0.75rem rgba(0,9,128,.05);
+    z-index: 2000;
+}
+
+nav > .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+#profile-badge {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 6.5rem;
+    background-color: #f7f7f7;
+    height: 2rem;
+    padding: 0.2rem 1rem;
+    border: transparent;
+    border-radius: 6.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+#profile-image-sm {
+    margin:0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3.125rem;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 75rem;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.sidenav {
+    width: 16rem;
+    right: unset;
+    padding-top: 5rem;
+    z-index: 1994;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color:#000;
+}
+
+#link-badge {
+    display: flex;
+    align-items: center;
+    width: 14rem;
+    height: 2rem;
+    padding: 1.3rem;
+    border: transparent;
+    border-radius: 6.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+   
+}
+
+#link-badge div {
+    margin-left: 0.5rem;
+}
+
+#link-badge:hover {
+    background-color: #f7f7f7;
+}
+
+#link-badge[class~="active"] {
+    background-color: #cbc8ff7b;
+    color: #6861fc;
+}
+
+#link-badge #profile-image-badge {
+    margin: 0;
+    height: 2rem;
+    width: 2rem;
+}
+
+@media (min-width: 75rem) {
+    .container {
+        max-width: 72.25rem;
+    }
+}

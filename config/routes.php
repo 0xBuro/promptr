@@ -3,35 +3,24 @@ require_once __DIR__ . '/../init.php';
 
 /* --------------------------------
     routes.php  
-    Hier werden alle Routes erzeugt 
-    und entsprechend zurückgegeben.
+    Hier werden alle Routes erzeugt.
     -------------------------------- */
 
-$base_dir = APP_ROOT;
-// URI Request
-$request_uri = $_SERVER['REQUEST_URI'];
+function getRoute($path): string { 
+  $routes = [
+    "/" => "/Promptr/index.php",
+    "/signup" => "/Promptr/pages/signupPage.php",
+    "/login" => "/Promptr/pages/loginPage.php",
+    "/main" => "/Promptr/pages/mainPage.php",
+    "/profile" => "/Promptr/pages/profilePage.php",
+    "/404" => "/Promptr/pages/404.php"
+  ];   
 
-
-// URI in Parameter Array splitten
-$parameters = explode('/', $request_uri);
-
-// Falls URI leer ist
-if (empty($parameters[0])) {
-  // default page laden
-  include($base_dir . '/index.php');
-} else if ($parameters[0] == $base_dir and $parameters[1] == 'pages') {
-  // falls page existiert
-  $page_name = $parameters[1];
-  $page_path = 'pages/' . $page_name . '.php';
-  if (file_exists($page_path)) {
-    // page Inhalt laden
-    include($page_path);
-  } else {
-    // page existiert nicht
-    include($base_dir . '/pages/404.php');
+  if(array_key_exists($path, $routes)) {
+    return strval($routes[$path]); 
   }
-} else {
-  // page nicht gefunden
-  include($base_dir . '/pages/404.php');
-}
-?>
+  else {
+    return strval($routes["/404"]);
+  };
+
+};

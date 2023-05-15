@@ -1,16 +1,14 @@
 <?php
 require_once __DIR__ . '/../init.php';
 /* --------------------------------
-    header.php - Navigationsleiste
+    header.php - head Komponente mit globalem Stylesheet.
     -------------------------------- */
 ?>
 
-<header>
-    <nav>
-      <ul>
-        <li><a href="/0xburo/pages/home">Home</a></li>
-        <li><a href="/0xburo/pages/about">About</a></li>
-        <li><a href="/0xburo/pages/contact">Contact</a></li>
-      </ul>
-    </nav>
-</header>
+<head>
+  <title><?php echo $title ?></title>
+  <?php require TEMPLATE_PATH . '/seo.php'; ?>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Promptr/assets/global.css">
+  <link rel="stylesheet" type="text/css" href="/Promptr/components/generalButtons/buttons.css">
+</head>

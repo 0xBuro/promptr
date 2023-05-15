@@ -1,0 +1,67 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* custom local font */
+@font-face {
+    font-family: "Pico";
+    src: url('/Promptr/assets/PICOBLA_.TTF');
+}
+
+#primary-button {
+    background-color: #000; 
+    border: none;
+    border-radius: 0.2rem;
+    color: #fff;
+    width: 24vw;
+    padding: 1rem;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 1rem 0.1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#secondary-button {
+    background-color: #fff; 
+    border: solid 0.2rem #6861fc;
+    border-radius: 0.2rem;
+    color: #6861fc;
+    width: 24vw;
+    padding: 1rem;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    font-size: 1rem;
+    margin: 0.4rem 0.1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#neutral-button {
+    background-color: #f7f7f7; 
+    border: none;
+    border-radius: 0.2rem;
+    color: #000;
+    width: 24vw;
+    padding: 1rem;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0.4rem 0.1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#neutral-button:hover {
+    background-color: #e4e4e4;
+}
+
+
+

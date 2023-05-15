@@ -1,0 +1,153 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* custom local font */
+@font-face {
+    font-family: "Pico";
+    src: url('./PICOBLA_.TTF');
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+	padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    color: #6861fc;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100vw;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    color: #8a8fa0;
+    background-color: #fff;
+    padding: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* mobile first */
+@media only screen { 
+
+    .fluent-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #fluent-emoji {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 0.5rem;
+    }
+
+    .onboard {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+
+    .onboard .right {
+        width: 100vw;
+        height: 90vh;
+        text-align: center;
+        padding-top: 20vh;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    #title {
+        font-size: 1.8rem;
+        font-family: 'Pico', sans-serif;  
+    }
+
+    .onboard .right #signup-button {
+        background-color: #000; 
+        border: none;
+        border-radius: 2rem;
+        color: #fff;
+        width: 30vw;
+        padding: 1rem;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 0.4rem 0.1rem;
+        cursor: pointer;
+        display: inline-block;
+      }
+      
+      .onboard .right #login-button {
+          background-color: #fff; 
+          border: solid 0.2rem #6861fc;
+          border-radius: 2rem;
+          color: #6861fc;
+          width: 30vw;
+          padding: 1rem;
+          font-family: 'Nunito', sans-serif;
+          text-align: center;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1rem;
+          font-size: 1rem;
+          margin: 0.4rem 0.1rem;
+          cursor: pointer;
+          display: inline-block;
+        }
+
+}
+
+/* Tablet & Desktop */
+@media only screen and (min-width: 40.063em) { 
+.onboard .left {
+    width: 50vw;
+    height: 80vh;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    background-image: url('/Promptr/assets/img/onboard-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.onboard .right {
+    width: 50vw;
+    text-align: left;
+}
+
+#title {
+    text-align: left;
+}
+
+.fluent-text {
+    justify-content: left;
+}
+
+} 
+ 
+
+/* Desktop only */
+@media only screen and (min-width: 64.063em) { 
+
+}
+
+

@@ -1,5 +1,7 @@
 # downloadable source code / assignment docs
 *.zip*
+conceptbutton.php
+conceptbutton.css
 
 # environmental variables / security
 .htaccess

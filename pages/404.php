@@ -6,20 +6,21 @@ require_once __DIR__ . '/../init.php';
     custom 404 Fehlerseite
     -------------------------------- */
 
+$title = '404 | Promptr';
+
+require TEMPLATE_PATH . '/layout.php';
 ?>
-<title>404 / Promptr</title>
-<style>
-.vl {
-  border-left: 1px solid gray;
-  height: 180px;
-  transform: none;
-}
-</style>
-<div style="position: relative;  width: 100%; height: 100%">
-<div style="margin: 0; position: absolute; top: 50%; left: 50%; display: flex; gap: 32px; transform: translate(-50%, -50%);">
-<p style="font-weight: light; font-size: 62px; font-family: sans-serif;">404</p>
-<div class="vl"></div>
-<img src="<?php echo ASSETS_PATH . '/404.svg'?>" width="150" />
+
+
+<div style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+<div style="display: flex; flex-direction: row; gap: 1.25;">
+<p style="font-weight: 600; font-size: 2.625rem; ">404</p>
+<img src="/Promptr/assets/fluent-emojis/ghost_animated.png" width="128" height="128"/>
 </div>
+<p style="text-align: center; margin-top: 1.375rem"> it looks spooky in here... <br/> 
+<a href="<?php echo getRoute("/") ?>">go back to Promptr</a>
 </div>
-<a href="/Promptr/index.php" >back</a>
+
+<?php 
+require TEMPLATE_PATH . '/footer.php';
+?>
