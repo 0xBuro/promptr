@@ -13,7 +13,10 @@ function getRoute($path): string {
     "/login" => "/Promptr/pages/loginPage.php",
     "/main" => "/Promptr/pages/mainPage.php",
     "/profile" => "/Promptr/pages/profilePage.php",
-    "/404" => "/Promptr/pages/404.php"
+    "/publicProfile" => "Promptr/pages/publicProfilePage.php",
+    "/history" => "/Promptr/pages/promptHistoryPage.php",
+    "/404" => "/Promptr/pages/404.php",
+    "/logout" => "/Promptr/handlers/logout.php"
   ];   
 
   if(array_key_exists($path, $routes)) {

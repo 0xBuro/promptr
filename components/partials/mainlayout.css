@@ -20,11 +20,31 @@ nav > .container {
    
 }
 
+#mobileNav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 12vh;
+    background-color: #fff;
+    box-shadow: 0rem 0.2rem 0.4rem #00098000,0 0.25rem 0.75rem rgba(0,9,128,.05);
+    z-index: 2000;
+    bottom: 0;
+}
+
+#mobileNav .mobileIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 #profile-badge {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 6.5rem;
+    min-width: 7rem;
+    max-width: 15rem;
     background-color: #f7f7f7;
     height: 2rem;
     padding: 0.2rem 1rem;
@@ -44,7 +64,13 @@ nav > .container {
     position: absolute;
 }
 
-img {
+#profile-badge img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3.125rem;
+}
+
+.sidenav img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 3.125rem;
@@ -52,63 +78,145 @@ img {
 
 .wrapper {
     display: flex;
-    max-width: 75rem;
+    max-width: 100vw;
     margin: auto;
     overflow-x: hidden;
 }
 
-.sidenav {
-    width: 16rem;
-    right: unset;
-    padding-top: 5rem;
-    z-index: 1994;
-    display: flex;
+.mainView {
+    width: 100vw;
+    padding: 1rem;
     flex-direction: column;
-    position: fixed;
-    overflow-x: hidden;
 }
 
-.sidenav a {
-    text-decoration: none;
-    color:#000;
+.promptBox {
+    max-width: 100vw;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0rem 0.2rem 0.4rem #00098000,0 0.25rem 0.75rem rgba(0,9,128,.05);
+    margin-bottom: 2rem;
 }
 
-#link-badge {
-    display: flex;
-    align-items: center;
-    width: 14rem;
-    height: 2rem;
-    padding: 1.3rem;
-    border: transparent;
-    border-radius: 6.25rem;
-    font-weight: 600;
+.promptBox .promptArea {
+    padding: 2rem;
+    min-height: 12vh; 
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.promptArea input {
+    border: 1px solid #e6e6e6;
+    outline: none;
     font-size: 1rem;
+    font-family: monospace;
+    width: 80vw;
+    padding: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.promptBox button {
+    margin-top: 1rem;
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
-    margin-top: 0.5rem;
-   
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
 }
 
-#link-badge div {
-    margin-left: 0.5rem;
-}
 
-#link-badge:hover {
-    background-color: #f7f7f7;
-}
-
-#link-badge[class~="active"] {
-    background-color: #cbc8ff7b;
-    color: #6861fc;
-}
-
-#link-badge #profile-image-badge {
-    margin: 0;
-    height: 2rem;
-    width: 2rem;
+.sidenav {
+    display: none;
 }
 
 @media (min-width: 75rem) {
     .container {
         max-width: 72.25rem;
+    }
+}
+
+/* Tablet & Desktop */
+@media only screen and (min-width: 40.063em) { 
+    .sidenav {
+        width: 16vw;
+        right: unset;
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sidenav a {
+        text-decoration: none;
+        color:#000;
+    }
+    
+    #link-badge {
+        display: flex;
+        align-items: center;
+        width: 14rem;
+        height: 2rem;
+        padding: 1.3rem;
+        border: transparent;
+        border-radius: 6.25rem;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 0.5rem;
+       
+    }
+    
+    #link-badge div {
+        margin-left: 0.5rem;
+    }
+    
+    #link-badge:hover {
+        background-color: #f7f7f7;
+    }
+    
+    #link-badge[class~="active"] {
+        background-color: #cbc8ff7b;
+        color: #6861fc;
+    }
+    
+    #link-badge #profile-image-badge {
+        margin: 0;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    #mobileNav {
+        display: none;
+    }
+
+    .mainView {
+        display: flex;
+        margin: auto;
+        margin-top: 4rem;
+        max-width: 75vw;
+        height: 72vh;
+        padding: 0.5rem;
+        margin-left: 8rem;
+    }
+
+    .wrapper {
+        max-width: 75vw;
+    }
+
+    .promptBox {
+        max-width: 42vw;
+        
+    }
+
+    .promptArea input {
+       
+        width: 35vw;
+    
     }
 }

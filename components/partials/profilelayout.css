@@ -1,0 +1,76 @@
+.profileView {
+    width: 100vw;
+    padding: 5rem;
+    flex-direction: column;
+}
+
+#editable div{
+   margin-top: 1.5rem;
+   
+}
+
+
+.profileView img:first-child {
+    position: relative;
+    max-width: 12rem;
+    max-height: 12rem;
+    width: 12rem;
+    height: 12rem;
+    min-height: 6rem;
+    border: solid 5px #fff;
+    border-radius: 100%;
+    box-shadow: 0rem 0.2rem 0.4rem #00098000,0 0.25rem 0.75rem rgba(0,9,128,.05);
+    object-fit: cover;
+}
+
+
+.profileView p {
+    font-size: 1.3rem;
+}
+
+#editable input[type="file"] {
+    display: none;
+}
+
+#editable img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.profileView h3 { 
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.profileView a { 
+    font-family: monospace;
+    text-decoration: none;
+}
+
+#editable input[type="text"] {
+   padding: 1rem;
+   border: solid 2px aliceblue;
+
+}
+
+#latestPrompts > img {
+    border: solid 2px aliceblue; 
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+/* Tablet & Desktop */
+@media only screen and (min-width: 40.063em) { 
+    .profileView {
+        display: flex;
+        margin: auto;
+        margin-top: 4rem;
+        max-width: 75vw;
+        height: 72vh;
+        padding: 0.5rem;
+        margin-left: 8rem;
+        flex-direction: column;
+    }
+
+}

@@ -1,5 +1,11 @@
 <?php
 require_once __DIR__ . '/init.php';
+
+session_start();
+if(isset($_SESSION['authUser'])) {
+    header('Location: ' . getRoute('/main'));
+}
+
 /* --------------------------------
     index.php 
     root Index.

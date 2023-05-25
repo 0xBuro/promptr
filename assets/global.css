@@ -25,21 +25,10 @@ a {
     cursor: pointer;
 }
 
-footer {
-    text-align: center;
-    font-size: 0.8rem;
-    width: 100vw;
-    bottom: 0;
-    margin: auto;
-    position: absolute;
-    color: #8a8fa0;
-    background-color: #fff;
-    padding: 1.25rem;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Nunito', sans-serif;
 }
+
 
 
 /* mobile first */
@@ -114,6 +103,9 @@ h1, h2, h3, h4, h5, h6 {
           display: inline-block;
         }
 
+        footer {
+            display: none;
+        } 
 }
 
 /* Tablet & Desktop */
@@ -140,6 +132,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .fluent-text {
     justify-content: left;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100vw;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    color: #8a8fa0;
+    background-color: #fff;
+    padding: 1.25rem;
 }
 
 } 

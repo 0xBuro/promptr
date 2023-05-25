@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../init.php';
 
+session_start();
+if(!isset($_SESSION['authUser'])) {
+    header('Location: ' . getRoute('/'));
+  }
 /* --------------------------------
     mainPage.php
     Hauptseite/Feed der Promptr app
@@ -17,8 +21,18 @@ require TEMPLATE_PATH . '/layout.php';
 </head>
 
 <?php 
-include COMPONENTS_PATH . '/mainComponents/nav.php'; 
-include COMPONENTS_PATH . '/mainComponents/sidenav.php';
-require TEMPLATE_PATH . '/footer.php';
+require COMPONENTS_PATH . '/mainComponents/nav.php'; 
 ?>
 
+<div class="wrapper">
+<?php
+require COMPONENTS_PATH . '/mainComponents/sidenav.php';
+require COMPONENTS_PATH . '/mainComponents/feed.php';
+?>
+
+</div>
+
+<?php
+require COMPONENTS_PATH . '/mainComponents/mobilenav.php';
+require TEMPLATE_PATH . '/footer.php';
+?>
