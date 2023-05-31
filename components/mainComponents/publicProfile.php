@@ -1,7 +1,15 @@
 <?php
+
+/* 
+    Public Profile Komponente - 
+    nutzt den profileFetch Handler, um Profilinformationen 
+    und die letzten Prompts eines Nutzers anzuzeigen
+*/
+
 require_once __DIR__ . '../../../init.php';
 
-require HANDLERS_PATH . '/profilefetch.php';
+require HANDLERS_PATH . '/profileFetch.php';
+
 
 if($profile) {
     $username = $profile['user_username'];
@@ -18,6 +26,16 @@ if($profile) {
     <div>
         <h3><?php echo $username ?></h3>
         <a href="/Promptr/pages/publicProfilePage.php?profile=<?php echo $username ?>"><?php echo 'Promptr/'.$username ?></a>
+        <p>Follower: <?php if($followerCount): ?> <?php echo $followerCount['followers']; else: echo '0'; ?> <?php endif; ?></p>
+        <?php if(isset($_SESSION['authUser']) && !$following): ?>    
+        <form method="post" action="<?php echo($_SERVER['REQUEST_URI']); ?>">
+            <input type="submit" value="Follow" name="follow" id="secondary-button"></input>
+            <?php else: ?>
+        <form method="post" action="<?php echo($_SERVER['REQUEST_URI']); ?>">        
+            <p>You are following this account</p>
+            <input type="submit" value="Unfollow" name="unfollow" id="secondary-button"></input>
+        </form>
+        <?php  endif; ?>
         <p>
         <?php
         if(!empty($info) || $info !== null) {
@@ -49,9 +67,9 @@ if($profile) {
     if($prompts): 
     ?>
         <?php foreach($prompts as $prompt) {
-            echo '<p>added prompt on: <strong>' . date( 'd F Y g:i A', strtotime($prompt['prompt_date'])). '</strong></p>';
-            echo '<p>Prompt used: <code style="background-color: #f7f7f7; padding: 0.5rem; border-radius: 0.5rem">' . $prompt['prompt_text'] . '</code></p>';
-            echo '<img src="'. $prompt['prompt_img_src'] .'" alt="prompt image" width=400 />';
+            echo '<p>added on: <strong>' . date( 'd F Y g:i A', strtotime($prompt['prompt_date'])). '</strong></p>';
+            echo '<p>Prompt: <code>' . $prompt['prompt_text'] . '</code></p>';
+            echo '<img src="'. $prompt['prompt_img_src'] .'" alt="prompt image" />';
         } 
     
     else:

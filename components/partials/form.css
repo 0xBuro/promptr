@@ -1,7 +1,7 @@
 input[type="text"] {
     border: none;
     border-bottom: 0.125rem solid #6861fc;
-    min-width: 24vw;
+    min-width: 22vw;
     padding: 0.5rem 1rem;
     margin: 0.75rem 0;
   }
@@ -9,7 +9,7 @@ input[type="text"] {
   input[type="password"] {
     border: none;
     border-bottom: 0.125rem solid #6861fc;
-    min-width: 24vw;
+    min-width: 22vw;
     padding: 0.5rem 1rem;
     margin: 0.75rem 0;
   }

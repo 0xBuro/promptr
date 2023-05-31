@@ -1,13 +1,13 @@
 <?php
+
+/*  ----------------------------------------------------------------------
+    publicProflePage.php  
+    öffentliches Profil (auch durch nicht registrierte Nutzer einsehbar).
+    --------------------------------------------------------------------- */
+
 require_once __DIR__ . '/../init.php';
 
-session_start();
-
-require HANDLERS_PATH . '/profilefetch.php';
-/* --------------------------------
-    profilePage.php  
-    Seite mit Profil Infos 
-    -------------------------------- */
+require HANDLERS_PATH . '/profileFetch.php';
 
 if ($profile) {
     $title = $profile['user_username'] . ' | Promptr';
@@ -40,5 +40,4 @@ require COMPONENTS_PATH . '/mainComponents/nav.php';
 
 <?php
 require COMPONENTS_PATH . '/mainComponents/mobilenav.php';
-require TEMPLATE_PATH . '/footer.php';
 ?>

@@ -1,9 +1,10 @@
 <?php
-require_once __DIR__ . '/../init.php';
+
 /* --------------------------------
-    SEO.php - Metatags, Favicon
+    SEO.php - Metatags, Favicons
     -------------------------------- */
 
+require_once __DIR__ . '/../init.php';
 ?>
   
 <meta charset="utf-8">
@@ -19,5 +20,5 @@ require_once __DIR__ . '/../init.php';
 
 <meta name="author" content="Oguzhan-Burak Bozkurt | https://github.com/0xburo">
 <meta name="description" content="Promptr, Share AI art with a single prompt.">
-<meta name="keywords" content="promptr, not, twitter, ai, art, prompt, artificial, intelligence, machine, learning, engineering, ml, hugging, face">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="promptr, not, twitter, ai, art, prompt, artificial, intelligence, machine, learning, engineering, ml, replicate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">

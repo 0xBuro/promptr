@@ -1,10 +1,11 @@
 <?php
-require_once __DIR__ . '/../init.php';
 
-/* --------------------------------
+/*  --------------------------------
     404.php  
     custom 404 Fehlerseite
     -------------------------------- */
+
+require_once __DIR__ . '/../init.php';
 
 $title = '404 | Promptr';
 
@@ -21,6 +22,4 @@ require TEMPLATE_PATH . '/layout.php';
 <a href="<?php echo getRoute("/") ?>">go back to Promptr</a>
 </div>
 
-<?php 
-require TEMPLATE_PATH . '/footer.php';
-?>
+

@@ -1,9 +1,11 @@
 <?php
-require_once __DIR__ . '/../init.php';
+
 /* --------------------------------
-    layout.php - Seitenlayout
+    layout.php - 
+    Seitenlayout vorgabe
     -------------------------------- */
 
+require_once __DIR__ . '/../init.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +15,10 @@ require_once __DIR__ . '/../init.php';
   <main>
 
   </main>
+<a href="/Promptr/conceptPage.php" class="concept-button">
+🍱 get the concept
+</a>
+<?php require TEMPLATE_PATH . '/footer.php'; ?>  
 </body>
 </html>
 

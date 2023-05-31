@@ -1,10 +1,14 @@
 <?php 
-/* --------------------------------
+/* ---------------------------------------------------
     init.php 
+
     hier werden alle Pfade definiert
     um den Zugriff auf bestimmte Unterodner
     zu vereinfachen. 
-    -------------------------------- */
+
+    globale Skripte: routes.php, sanitizeInput.php
+    und session_start() für DRY zwecke
+    -------------------------------------------------- */
 define('APP_ROOT', __DIR__);
 
 define('API_PATH', APP_ROOT. '/api');
@@ -19,4 +23,11 @@ define('TEMPLATE_PATH', APP_ROOT . '/template');
 
 require CONFIG_PATH . '/routes.php';
 require CONFIG_PATH . '/sanitizeInput.php';
+
+
+if(!isset($_SESSION)) { 
+    session_start(); 
+} 
 ?>
+
+

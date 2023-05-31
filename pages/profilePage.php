@@ -1,14 +1,20 @@
 <?php
+
+/*  --------------------------------
+    profilePage.php  
+    eigene Profilseite mit Infos zum
+    Nutzer und Konfigurationsmöglichkeiten
+    -------------------------------- */
+
 require_once __DIR__ . '/../init.php';
 
-session_start();
 if(!isset($_SESSION['authUser'])) {
     header('Location: ' . getRoute('/'));
   }
-/* --------------------------------
-    profilePage.php  
-    Seite mit Profil Infos 
-    -------------------------------- */
+
+if(isset($_GET['profile'])) {
+    header('Location: ' . getRoute('/publicProfile') . '?profile=' . $_GET['profile']);
+} 
 
 $title = 'Profile | Promptr';
 
@@ -35,5 +41,4 @@ require COMPONENTS_PATH . '/mainComponents/profile.php';
 
 <?php
 require COMPONENTS_PATH . '/mainComponents/mobilenav.php';
-require TEMPLATE_PATH . '/footer.php';
 ?>

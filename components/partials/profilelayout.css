@@ -1,12 +1,9 @@
 .profileView {
     width: 100vw;
-    padding: 5rem;
+    min-height: 100vh;
     flex-direction: column;
-}
-
-#editable div{
-   margin-top: 1.5rem;
-   
+    padding: 2rem;
+    padding-bottom: 8rem;
 }
 
 
@@ -26,6 +23,11 @@
 
 .profileView p {
     font-size: 1.3rem;
+}
+
+#editable {
+    min-height: 100vh;
+    padding-bottom: 12rem;
 }
 
 #editable input[type="file"] {
@@ -51,26 +53,40 @@
 #editable input[type="text"] {
    padding: 1rem;
    border: solid 2px aliceblue;
+}
 
+#latestPrompts {
+  padding-bottom: 12rem;
+}
+
+#latestPrompts > p {
+    font-size: 1rem;
 }
 
 #latestPrompts > img {
-    border: solid 2px aliceblue; 
-    padding: 2rem;
-    font-size: 1rem;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2rem;
 }
+
+#latestPrompts code {
+    background-color: rgb(236, 236, 236);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
 
 /* Tablet & Desktop */
 @media only screen and (min-width: 40.063em) { 
     .profileView {
         display: flex;
         margin: auto;
-        margin-top: 4rem;
         max-width: 75vw;
-        height: 72vh;
-        padding: 0.5rem;
+        height: 100vh;
         margin-left: 8rem;
         flex-direction: column;
+        padding-bottom: 12rem;
     }
 
 }

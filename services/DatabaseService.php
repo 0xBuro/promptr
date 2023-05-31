@@ -1,5 +1,14 @@
 <?php
 
+/* 
+
+    DatabaseConnection - Datenbank Service
+    wird in allen anderen Services im Konstruktor angelegt.
+    vereinfachter Zugriff auf die Datenbank bei erwarteten
+    Konfigurationsparametern (aus conn.php).
+
+*/
+
 class DatabaseConnection {
     private $pdo;
 

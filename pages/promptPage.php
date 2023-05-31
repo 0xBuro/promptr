@@ -1,9 +1,8 @@
 <?php
 
 /*  ----------------------------------------------
-    mainPage.php
-    Hauptseite nach Anmeldung/Registrierung/Auth
-    auf Promptr. 
+    promptPage.php
+    Prompt-Generierungs Page 
     --------------------------------------------- */
 
 require_once __DIR__ . '/../init.php';
@@ -13,7 +12,7 @@ if(!isset($_SESSION['authUser'])) {
     header('Location: ' . getRoute('/'));
 }
 
-$title = 'Feed | Promptr';
+$title = 'Prompt | Promptr';
 
 require TEMPLATE_PATH . '/layout.php';
 ?>
@@ -31,7 +30,7 @@ require COMPONENTS_PATH . '/mainComponents/nav.php';
 <div class="wrapper">
 <?php
 require COMPONENTS_PATH . '/mainComponents/sidenav.php';
-require COMPONENTS_PATH . '/mainComponents/feed.php';
+require COMPONENTS_PATH . '/mainComponents/promptBox.php';
 ?>
 </div>
 

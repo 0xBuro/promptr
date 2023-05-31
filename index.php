@@ -1,14 +1,13 @@
 <?php
 require_once __DIR__ . '/init.php';
 
-session_start();
 if(isset($_SESSION['authUser'])) {
     header('Location: ' . getRoute('/main'));
 }
 
 /* --------------------------------
     index.php 
-    root Index.
+    root / Homepage
     -------------------------------- */ 
 
 $title = 'Promptr | Welcome';
@@ -33,6 +32,5 @@ require TEMPLATE_PATH . '/layout.php';
 
 
 <?php 
-require TEMPLATE_PATH . '/footer.php';
 include COMPONENTS_PATH . '/conceptbutton/conceptbutton.php';
 ?>

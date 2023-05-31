@@ -14,10 +14,11 @@
 
 body {
     margin: 0;
-	padding: 0;
+    padding-bottom: 0;
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
 }
+
 
 a {
     color: #6861fc;
@@ -46,6 +47,16 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: 0.5rem;
     }
 
+    .onboardScreen {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        margin-top: 3.5rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        }
     .onboard {
         display: flex;
         flex-direction: row;
@@ -141,10 +152,12 @@ footer {
     width: 100vw;
     bottom: 0;
     margin: auto;
-    position: absolute;
+    position: fixed;
     color: #8a8fa0;
     background-color: #fff;
     padding: 1.25rem;
+    border-top: solid 1px aliceblue;
+    z-index: 1000;
 }
 
 } 

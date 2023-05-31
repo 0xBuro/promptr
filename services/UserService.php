@@ -1,5 +1,18 @@
 <?php
 
+/* 
+
+    UserService - genereller Benutzer Service, welches mit der Datenbank kommuniziert.
+    Funktionen:
+    - Registrieren eines neuen Nutzers
+    - Hash & Salt generiertes Passwort ablegen
+    - default Avatar aus https://robohash.org beziehen
+    - User einloggen
+    - User anhand Benutzernamen identifizieren (UNIQUE)
+    - User Bio/Info oder Avatar updaten
+
+*/
+
 class UserService
 {
     private $db;
@@ -108,26 +121,6 @@ class UserService
             }
         }
         return null;
-    }
-
-    public function getUserById($userId)
-    {
-        $query = "SELECT * FROM user WHERE user_id = :userId";
-        try {
-            $stmt = $this->db->prepare($query);
-            $stmt->bindParam(':userId', $userId);
-            $stmt->execute();
-
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if ($user === false) {
-                return null;
-            }
-
-            return $user;
-        } catch (PDOException $e) {
-            die("User retrieval error: " . $e->getMessage());
-        }
     }
 
     public function updateUserInfo($username, $info) {

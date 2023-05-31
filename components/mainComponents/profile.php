@@ -1,7 +1,14 @@
 <?php
-require_once __DIR__ . '../../../init.php';
 
-require HANDLERS_PATH . '/profilefetch.php';
+/* 
+    Profil Komponente - 
+    UI Komponente zum Anzeigen des eigenen Profils.
+    Forms nutzen den updateAvatar und updateInfo Handler,
+    um Profilangaben zu aktualisieren.
+*/
+
+require_once __DIR__ . '../../../init.php';
+require HANDLERS_PATH . '/profileFetch.php';
 
 if (isset($_SESSION['authUser'])) {
     $username = $_SESSION['authUser']['user_username'];
@@ -23,10 +30,11 @@ if (isset($_SESSION['authUser'])) {
             </label>
             <input type="file" id="user_avatar" name="user_avatar" onchange="preview()"/>
             </div>
-            <input type="submit" value="update avatar" id="neutral-button"></input>
+            <input type="submit" value="update avatar" id="secondary-button"></input>
             </form> 
             <h3><?php echo $username ?></h3>
             <a href="/Promptr/pages/publicProfilePage.php?profile=<?php echo $username ?>"><?php echo 'Promptr/' . $username ?></a>
+            <p>Follower: <?php if($privateProfileCounter): ?> <?php echo $privateProfileCounter['followers']; else: echo '0'; ?> <?php endif; ?></p>
             <p><?php
             if(!empty($info) || $info !== null) {
             if(strpos($info, '#') !== false) {

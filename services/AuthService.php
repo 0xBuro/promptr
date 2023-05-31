@@ -1,5 +1,14 @@
 <?php
 
+/* 
+
+    AuthService - genereller Authentifizierungsservice, welches mit der Datenbank kommuniziert.
+    Funktionen:
+    - Benutzer authentifizieren und Nutzer Objekt als PHP-Server Session zurückgeben
+    - vereinfacht die Authentifizierungsprüfung in der gesamten App
+
+*/
+
 class AuthService
 {
     private $db;
@@ -14,8 +23,9 @@ class AuthService
         
         if($user !== null) {
            return $_SESSION['authUser'] = $user;
+        } else {
+            return null;
         }
-        
     }
 
     private function getAuthUser($username) {

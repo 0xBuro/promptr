@@ -2,10 +2,14 @@
 *.zip*
 conceptbutton.php
 conceptbutton.css
+conceptPage.php
 
-# environmental variables / security
+# dotenv / security
 .htaccess
 .htpasswd
+
+# hide server data
+storage/*
 
 # vscode configuration
 .vscode

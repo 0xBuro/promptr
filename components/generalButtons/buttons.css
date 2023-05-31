@@ -12,7 +12,8 @@
     border: none;
     border-radius: 0.2rem;
     color: #fff;
-    width: 24vw;
+    min-width: 15vw;
+    max-width: 42vw;
     padding: 1rem;
     font-family: 'Nunito', sans-serif;
     text-align: center;
@@ -29,7 +30,8 @@
     border: solid 0.2rem #6861fc;
     border-radius: 0.2rem;
     color: #6861fc;
-    width: 24vw;
+    min-width: 15vw;
+    max-width: 42vw;
     padding: 1rem;
     font-family: 'Nunito', sans-serif;
     text-align: center;
@@ -47,7 +49,8 @@
     border: none;
     border-radius: 0.2rem;
     color: #000;
-    width: 24vw;
+    min-width: 15vw;
+    max-width: 42vw;
     padding: 1rem;
     font-family: 'Nunito', sans-serif;
     text-align: center;
